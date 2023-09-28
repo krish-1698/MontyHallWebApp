@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6PVg3yqkDJrwX95NTOJSVsgTmKXHVX1dcL5LBdoQ4N0=",
+  "Source": "MontyHallBackend",
+  "BasePath": "_content/MontyHallBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

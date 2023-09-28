@@ -1,0 +1,92 @@
+
+<!-- Displaying images -->
+<!-- <div class="container">
+    <h1>Monty Hall Simulation</h1>
+    <div *ngFor="let simulation of simulations1; let i = index">
+      <div class="simulation-card" *ngIf="i === currentStep">
+        <h3>Simulation {{ i + 1 }}</h3>
+        <div class="doors">
+          <div class="door" *ngFor="let image of simulationImages; let j = index">
+            <img [src]="image" alt="Door {{ j + 1 }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<mat-card class="card-container">      
+<div class="container">
+    <h1>Monty Hall Simulation</h1>
+      <label class="label1"  for="numberOfSimulations">Number of Simulations:</label>
+      <mat-form-field class="form-group">
+      <input type="number" [(ngModel)]="numberOfSimulations" id="numberOfSimulations" matInput />
+    </mat-form-field>
+    <div class="form-group">
+        <label class="label1">Should Switch?</label>
+        <mat-slide-toggle [(ngModel)]="shouldSwitch" id="shouldSwitch"></mat-slide-toggle>
+      </div>
+    <button mat-raised-button color="primary" (click)="simulateMontyHall()">Simulate</button>
+    <div *ngIf="simulationResults" class="overall-result-div">
+      <h2>Simulation Result</h2>
+      <p>Number of Simulations: {{ simulationResults.numberOfSimulations }}</p>
+      <p>Should Switch: {{ simulationResults.shouldSwitch }}</p>
+      <p>Number of Wins:{{simulationResults.win}}</p>
+      <p>Winning Percentage: {{ simulationResults.winningPercentage }}%</p>
+
+      <!-- <div *ngFor="let simulation of simulations; let i = index">
+      <h2>Simulation {{i+1}}</h2>
+
+      <p>Correct Door: {{simulationResult.results[i].correctDoor}}</p>
+      <p>First Chosen Door: {{simulationResult.results[i].firstChosenDoor}}</p>
+      <p>Revealing Door: {{simulationResult.results[i].revealingDoor}}</p>
+      <p>Next Chosen Door: {{simulationResult.results[i].nextChosenDoor}}</p>
+      <p>{{ simulationResult.results[i].isWin ? 'Win' : 'Lost' }} </p>
+      </div> -->
+
+
+    </div>
+  </div>
+</mat-card>
+
+
+<!-- Added Mat Table -->
+<div *ngIf="showTable">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+    <ng-container matColumnDef="numberOfSimulations" >
+      <th mat-header-cell *matHeaderCellDef class="center-text"> SIMULATIONS </th>
+      <td mat-cell *matCellDef="let element" class="center-text" > {{element.numberOfSimulations}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="correctDoor">
+      <th mat-header-cell *matHeaderCellDef class="center-text"> CORRECT DOOR </th>
+      <td mat-cell *matCellDef="let element" class="center-text"> {{element.correctDoor}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="firstChosenDoor">
+      <th mat-header-cell *matHeaderCellDef class="center-text"> FIRST CHOSEN DOOR </th>
+      <td mat-cell *matCellDef="let element" class="center-text"> {{element.firstChosenDoor}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="revealingDoor">
+        <th mat-header-cell *matHeaderCellDef class="center-text"> REVEALING DOOR </th>
+        <td mat-cell *matCellDef="let element" class="center-text"> {{element.revealingDoor}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="nextChosenDoor">
+        <th mat-header-cell *matHeaderCellDef class="center-text"> NEXT CHOSEN DOOR </th>
+        <td mat-cell *matCellDef="let element" class="center-text"> {{element.nextChosenDoor == -1 ? 'Not chosen': element.nextChosenDoor }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="result">
+        <th mat-header-cell *matHeaderCellDef class="center-text"> RESULT</th>
+        <td mat-cell *matCellDef="let element" class="center-text"> {{element.result}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+</div>
+  
+

@@ -1,0 +1,70 @@
+.card-container {
+    width: 5    00px;
+    margin:55px 550px; 
+    padding: 16px 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); 
+  }
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 30px;
+  }
+  
+  .form-group {
+    margin: 10px 0;
+  }
+
+  .form-group label{
+    font-size: medium;
+  }
+
+  .label1{
+    font-size:medium;
+    width: 150px; 
+    margin-right: 16px; 
+  }
+  
+
+    /* .simulation-card {
+        margin-top: 20px;
+        padding: 20px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    } */
+  
+  .doors {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+  }
+  
+  .door {
+    flex: 1; 
+    text-align: center;
+    width: 100px; 
+    height: 150px;
+  }
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; 
+    height: auto; 
+  }
+
+
+  .center-text {
+    text-align: center; 
+        vertical-align: middle; 
+  }
+
+  .overall-result-div{
+    margin-top: 30px;
+  }
+
+  th{
+    font-weight: bold;
+  }  

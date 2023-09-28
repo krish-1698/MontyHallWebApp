@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MontyHallBackend", "MontyHallBackend\MontyHallBackend.csproj", "{24947D41-3937-4425-A27E-1337565363D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24947D41-3937-4425-A27E-1337565363D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24947D41-3937-4425-A27E-1337565363D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24947D41-3937-4425-A27E-1337565363D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24947D41-3937-4425-A27E-1337565363D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7C9E094-B398-4FE4-88FE-6F10F5EBC7BA}
+	EndGlobalSection
+EndGlobal
